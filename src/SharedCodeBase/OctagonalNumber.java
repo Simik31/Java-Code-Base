@@ -1,9 +1,9 @@
 package SharedCodeBase;
 
-public class PentagonalNumber {
+public class OctagonalNumber {
 
     public static long get(long n) {
-        return n * (3 * n - 1) / 2;
+        return n * (3 * n - 2);
     }
 
     public static long reverse(long n) {
@@ -11,5 +11,4 @@ public class PentagonalNumber {
         while(get(y) != n) y++;
         return y;
     }
-
 }

@@ -7,5 +7,4 @@ public class StringSymbolCounter {
         for(int i = 0; i < data.length() - to_search.length() + 1; i++) if(data.startsWith(to_search, i)) counter++;
         return counter;
     }
-
 }

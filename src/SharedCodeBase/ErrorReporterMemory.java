@@ -22,7 +22,11 @@ public class ErrorReporterMemory {
     }
 
     public void append(String toAdd) {
-        memory.append(toAdd).append("\n");
+        memory.append(toAdd);
+    }
+
+    public void appendLine(String toAdd) {
+        append(toAdd + "\n");
     }
 
     public void FlushToFile() {
@@ -30,7 +34,7 @@ public class ErrorReporterMemory {
         if(print) System.out.print(toFlush);
         for (String color : COLOR.toArray()) toFlush = toFlush.replace(color, "");
         try {
-            errorLogFile.write(toFlush + System.lineSeparator());
+            errorLogFile.write(toFlush);
             errorLogFile.close();
         } catch (Exception e) {
             errorReporter.objectError(this, "errorLogFile", e, 10);
